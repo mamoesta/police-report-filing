@@ -13,7 +13,7 @@ male_output = '/Users/martymoesta/Documents/git.nosync/police-report-filing/auss
 
 with open(sys.argv[1]) as file:
     lines = [line.rstrip() for line in file]
-input_full_path = ['/home/ubuntu/police-report-filing/open-interviews/' + x for x in lines]
+input_full_path = ['./open-interviews/' + x for x in lines]
 print(len(input_full_path))
 output = sys.argv[2]
 
