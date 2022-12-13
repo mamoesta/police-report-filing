@@ -10,8 +10,12 @@ female_output = '/Users/martymoesta/Documents/git.nosync/police-report-filing/au
 
 male_output = '/Users/martymoesta/Documents/git.nosync/police-report-filing/aussies/male/interview-results/'
 '''
-input = os.listdir(sys.argv[1])
-input_full_path = [sys.argv[1] + x for x in input]
+
+with open(sys.argv[1]) as file:
+    lines = [line.rstrip() for line in file]
+input_full_path = ['/home/ubuntu/police-report-filing/open-interviews/' + x for x in lines]
+print(len(input_full_path))
 output = sys.argv[2]
+
 #print(input_full_path, output)
 ts.generate_transcript(input_full_path, output)
